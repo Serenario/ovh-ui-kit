@@ -28,6 +28,72 @@ oui-message is a package which provide styles for the `oui-message` component.
 </div>
 ```
 
+### Help
+
+```html:preview
+<div class="oui-message oui-message_help" role="alert">
+  <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Help message</p>
+</div>
+```
+### Help with close button
+
+```html:preview
+<div class="oui-message oui-message_help" role="alert">
+  <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Help message with close button</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+```
+### Help with icon medium
+
+```html:preview
+<div class="oui-message oui-message_help oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+</div>
+```
+### Help with icon medium and close button
+
+```html:preview
+<div class="oui-message oui-message_help oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+```
+### Help with no icon
+
+```html:preview
+<div class="oui-message oui-message_help oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Help message no icon</p>
+</div>
+```
+### Help with no icon and close button
+
+```html:preview
+<div class="oui-message oui-message_help oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Help message with close button and no icon</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+```
+### Help with no border
+
+```html:preview
+<div class="oui-message oui-message_help oui-message_no-border" role="alert">
+  <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Help message no border</p>
+</div>
+
+<div class="oui-message oui-message_help oui-message_no-icon oui-message_no-border" role="alert">
+  <p class="oui-message__body"><strong>Help message</strong> no border</p>
+</div>
+```
+
 ### Info
 
 ```html:preview
@@ -326,6 +392,28 @@ Define the base styles for a message.
 );
 ```
 
+### .message-help
+
+Will stylize your message as an help one.
+
+```less
+#oui > .message-help();
+```
+
+```less
+#oui > .message-help(
+  @selector: Class,
+  @font-color: Color,
+  @border-color: Color,
+  @background-color: Color,
+  @icon-color: Color,
+  @icon-position-top: Number,
+  @icon-position-left: Number,
+  @icon-size: Number,
+  @padding: Number
+);
+```
+
 ### .message-info
 
 Will stylize your message as an informative one.
@@ -467,21 +555,25 @@ The message component can take 1 to 4 inner elements:
 
 The provided modifiers are:
 
-| Class                                      | Description                                                  |
-| ------------------------------------------ | ------------------------------------------------------------ |
-| `oui-message_info`                         | Make the alert looks like an info message with an icon       |
-| `oui-message_info oui-message_icon-m`      | Make the alert looks like an info message with a bigger icon |
-| `oui-message_info oui-message_no-icon`     | Make the alert looks like an info message with no icon       |
-| `oui-message_info oui-message_no-border`   | Make the alert looks like an info message with no border     |
-| `oui-message_success`                      | Make the alert looks like a success message with an icon     |
-| `oui-message_success oui-message_icon-m`   | Make the alert looks like an info message with a bigger icon |
-| `oui-message_success oui-message_no-icon`  | Make the alert looks like a success message with no icon     |
-| `oui-message_success oui-message_no-border`| Make the alert looks like a success message with no border   |
-| `oui-message_warning`                      | Make the alert looks like a warning message with an icon     |
-| `oui-message_warning oui-message_icon-m`   | Make the alert looks like an info message with a bigger icon |
-| `oui-message_warning oui-message_no-icon`  | Make the alert looks like a warning message with no icon     |
-| `oui-message_warning oui-message_no-border`| Make the alert looks like a warning message with no border   |
-| `oui-message_error`                        | Make the alert looks like an error message with an icon      |
-| `oui-message_error oui-message_icon-m`     | Make the alert looks like an info message with a bigger icon |
-| `oui-message_error oui-message_no-icon`    | Make the alert looks like an error message with no icon      |
-| `oui-message_error oui-message_no-border`  | Make the alert looks like an error message with no border    |
+| Class                                      | Description                                                    |
+| ------------------------------------------ | -------------------------------------------------------------- |
+| `oui-message_help`                         | Make the alert looks like an help message with an icon         |
+| `oui-message_help oui-message_icon-m`      | Make the alert looks like an help message with a bigger icon   |
+| `oui-message_help oui-message_no-icon`     | Make the alert looks like an help message with no icon         |
+| `oui-message_help oui-message_no-border`   | Make the alert looks like an help message with no border       |
+| `oui-message_info`                         | Make the alert looks like an info message with an icon         |
+| `oui-message_info oui-message_icon-m`      | Make the alert looks like an info message with a bigger icon   |
+| `oui-message_info oui-message_no-icon`     | Make the alert looks like an info message with no icon         |
+| `oui-message_info oui-message_no-border`   | Make the alert looks like an info message with no border       |
+| `oui-message_success`                      | Make the alert looks like a success message with an icon       |
+| `oui-message_success oui-message_icon-m`   | Make the alert looks like a success message with a bigger icon |
+| `oui-message_success oui-message_no-icon`  | Make the alert looks like a success message with no icon       |
+| `oui-message_success oui-message_no-border`| Make the alert looks like a success message with no border     |
+| `oui-message_warning`                      | Make the alert looks like a warning message with an icon       |
+| `oui-message_warning oui-message_icon-m`   | Make the alert looks like a warning message with a bigger icon |
+| `oui-message_warning oui-message_no-icon`  | Make the alert looks like a warning message with no icon       |
+| `oui-message_warning oui-message_no-border`| Make the alert looks like a warning message with no border     |
+| `oui-message_error`                        | Make the alert looks like an error message with an icon        |
+| `oui-message_error oui-message_icon-m`     | Make the alert looks like an error message with a bigger icon  |
+| `oui-message_error oui-message_no-icon`    | Make the alert looks like an error message with no icon        |
+| `oui-message_error oui-message_no-border`  | Make the alert looks like an error message with no border      |

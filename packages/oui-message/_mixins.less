@@ -77,6 +77,83 @@
     }
   }
 
+  .message-help(
+    @selector;
+    @font-color: @oui-message-help-font-color;
+    @border-color: @oui-message-help-border-color;
+    @background-color: @oui-message-help-background-color;
+    @icon-color: @oui-message-help-icon-color;
+    @icon-size: @oui-message-help-icon-size;
+    @icon-position-top: @oui-message-help-icon-position-top;
+    @icon-position-left: @oui-message-help-icon-position-left;
+    @padding: @oui-message-help-padding;
+  ) {
+    padding: @padding;
+    border-color: @border-color;
+    background-color: @background-color;
+    color: @font-color;
+
+    .@{selector}__close-button {
+      color: @font-color;
+      opacity: 1;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: .6;
+      }
+    }
+
+    .oui-icon-help_circle {
+      position: absolute;
+      display: block;
+      top: @icon-position-top;
+      left: @icon-position-left;
+      color: @icon-color;
+      font-size: @icon-size;
+    }
+
+    .oui-tip-top {
+      &::after {
+        border-top-color: @background-color;
+      }
+
+      &::before {
+        border-top-color: @border-color;
+      }
+    }
+
+    .oui-tip-right {
+      &::after {
+        border-right-color: @background-color;
+      }
+
+      &::before {
+        border-right-color: @border-color;
+      }
+    }
+
+    .oui-tip-bottom {
+      &::after {
+        border-bottom-color: @background-color;
+      }
+
+      &::before {
+        border-bottom-color: @border-color;
+      }
+    }
+
+    .oui-tip-left {
+      &::after {
+        border-left-color: @background-color;
+      }
+
+      &::before {
+        border-left-color: @border-color;
+      }
+    }
+  }
+
   .message-info(
     @font-color: @oui-message-info-font-color;
     @border-color: @oui-message-info-border-color;

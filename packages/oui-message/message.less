@@ -2,15 +2,21 @@
 @import './_mixins';
 
 .oui-message {
+  @oui-selector: oui-message;
+
   #oui > .message-normalize();
   #oui > .message-base();
 
-  &_success {
-  	#oui > .message-success();
+  &_help {
+    #oui > .message-help(@oui-selector);
   }
 
   &_info {
-  	#oui > .message-info();
+    #oui > .message-info();
+  }
+
+  &_success {
+  	#oui > .message-success();
   }
 
   &_warning {

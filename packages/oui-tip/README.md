@@ -39,6 +39,31 @@ Tips are used together with a relative positionned component as the `oui-message
 </div>
 ```
 
+### Help
+
+```html:preview
+<div class="oui-message oui-message_help" role="alert">
+  <span class="oui-tip-top" aria-hidden="true"></span>
+  <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Help message with icon and tip top</p>
+</div>
+<div class="oui-message oui-message_help" role="alert">
+  <span class="oui-tip-right" aria-hidden="true"></span>
+  <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Help message with icon, tip right and close button</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+<div class="oui-message oui-message_help oui-message_no-icon" role="alert">
+  <span class="oui-tip-bottom" aria-hidden="true"></span>
+  <p class="oui-message__body">Help message with no icon, tip bottom and close button</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+<div class="oui-message oui-message_help oui-message_no-icon" role="alert">
+  <span class="oui-tip-left" aria-hidden="true"></span>
+  <p class="oui-message__body">Help message with no icon and tip left</p>
+</div>
+```
+
 ### Info
 
 ```html:preview
