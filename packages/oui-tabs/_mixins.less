@@ -1,0 +1,51 @@
+@import '../oui-button/_mixins';
+@import './_variables';
+
+#oui {
+  .tabs-base(
+    @border: @oui-tabs-border
+  ) {
+    border-bottom: @border;
+    padding: 0;
+  }
+
+  .tabs-item(
+    @border-size: @oui-tabs-border-size
+  ) {
+    display: inline-block;
+    margin-bottom: -1 * @border-size;
+  }
+
+  .tabs-button(
+    @border: @oui-tabs-border,
+    @background: @oui-tabs-inactive-background
+  ) {
+    #oui > .button-normalize();
+    #oui > .button-base();
+    #oui > .button-hollow();
+
+    border: @border;
+    border-radius: @oui-global-base-radius @oui-global-base-radius 0 0;
+    margin-bottom: 0;
+    font-weight: @oui-font-regular;
+    background: @background;
+  }
+
+  .tabs-button-active(
+    @background: @oui-tabs-active-background,
+    @border-color: @oui-tabs-border-color
+  ) {
+    background: @background;
+    border-bottom-color: transparent;
+
+    &:hover, &:focus {
+      border-color: @border-color;
+      border-bottom-color: transparent;
+      cursor: default;
+    }
+
+    &:focus {
+      box-shadow: inherit;
+    }
+  }
+}
