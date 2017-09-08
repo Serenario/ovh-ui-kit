@@ -2,11 +2,16 @@
 @import './_variables';
 
 #oui {
-  .tabs-base(
+  .tabs-items(
     @border: @oui-tabs-border
   ) {
     border-bottom: @border;
     padding: 0;
+    margin: 0;
+  }
+
+  .tabs-items-with-content() {
+    border-bottom: none;
   }
 
   .tabs-item(
@@ -47,5 +52,15 @@
     &:focus {
       box-shadow: inherit;
     }
+  }
+
+  .tabs-content (
+    @border: @oui-tabs-border,
+    @padding: rem-calc(15)
+  ) {
+    border: @border;
+    border-radius: 0 @oui-global-base-radius-medium @oui-global-base-radius-medium @oui-global-base-radius-medium;
+
+    padding: @padding;
   }
 }

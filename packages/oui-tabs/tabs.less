@@ -1,7 +1,13 @@
 @import './_mixins';
 
 .oui-tabs {
-  #oui > .tabs-base();
+  &__items {
+    #oui > .tabs-items();
+  }
+
+  &__items_with-content {
+    #oui > .tabs-items-with-content();
+  }
 
   &__item {
     #oui > .tabs-item();
@@ -13,5 +19,9 @@
     &_active {
       #oui > .tabs-button-active();
     }
+  }
+
+  &__content {
+    #oui > .tabs-content();
   }
 }
